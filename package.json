@@ -2,12 +2,15 @@
 	"name": "piano",
 	"version": "0.1.0",
 	"private": false,
+	"homepage": "https://amaklakov.github.io/simple-piano",
 	"scripts": {
 		"prestart": "yarn",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
@@ -19,7 +22,8 @@
 	},
 	"devDependencies": {
 		"cz-conventional-changelog": "3.0.2",
-		"prettier": "^1.19.1"
+		"prettier": "^1.19.1",
+		"gh-pages": "4.0.0"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
